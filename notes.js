@@ -61,3 +61,64 @@
 // if you wish to import multiple specific items within the curly braces then look to the second to last example. You put a comma in between them
 // if you wish to import all the exports of a file, then look to the last example, the * imports all the exports of a file and saves them as properties of the  bundled  object, so to access each export, you would use the follow dot notation such as bundled.clean or bundled.baseData
 // you also do not need to put the .js from the end of the file location if the file type is jS
+
+
+// classes
+// e.g.
+// class Person {
+//     name = 'Max';
+//     call = () => {...}
+// }
+// 
+// which is reminiscent of constructor functions:
+// e.g.
+// const myPerson = new Person();
+// myPerson.call();
+// console.log(myPerson.name)
+// etc
+// 
+// 
+// class Human {
+//     constructor() {
+//         this.gender = 'male';
+//     }
+
+//     printGender() {
+//         console.log(this.gender);
+//     }
+// }
+
+// class Person extends Human {
+//     constructor() {
+//         super();
+//         this.name = 'Max';
+//     };
+//     printMyName() {
+//         console.log(this.name);
+//     };
+//     printAnyName(name) {
+//         console.log(name);
+//     }
+// };
+
+// const somePersonName = new Person();
+// somePersonName.printMyName();
+// somePersonName.printGender();
+// somePersonName.printAnyName('Bob');
+// 
+// 
+// in this above example of a class there are many things at work here
+// first, the class Human is declared and defined; notice how the first thing that is defined is a 'constructor' function
+// this function will run as the first thing that happens in a class function automatically when the class is called
+// in this case, the constructor function with Human assigns a property, then, after the constructor function runs, a method is defined
+// 
+// in the next class we see the class Person 'extends' the class Human, what this means is that the class Person inherits all the properties,
+// the constructor function, and all the methods of the class on the right side of extends, in this case Human. What this means is that the previous
+// properties, methods, etc of Human are now accessible through Person. The one thing to note is that if you're using a constructor function
+// in a function that is extending another function, then you will need to run the 'super()' function at the first line of the constructor function
+// 
+// now we look at the last section starting at the const variable. classes work similarly to constructor function syntax in that you must declare
+// a new variable " const newVariable = '''new''' className() ". The 'new' syntax is being emphasized here as being the keyword used to define a
+// variable as the name of an object that inherits all the properties, methods, etc of the class. In this last case above, Person() is the class
+// whose properties, methods, etc are being stored in the, now an object, object somePersonName. Thus we are then after able to access the properties,
+// methods, etc from dot notation such as somePersonName.printMyName();
