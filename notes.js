@@ -82,12 +82,12 @@
 //     constructor() {
 //         this.gender = 'male';
 //     }
-
+// 
 //     printGender() {
 //         console.log(this.gender);
 //     }
 // }
-
+// 
 // class Person extends Human {
 //     constructor() {
 //         super();
@@ -100,7 +100,7 @@
 //         console.log(name);
 //     }
 // };
-
+// 
 // const somePersonName = new Person();
 // somePersonName.printMyName();
 // somePersonName.printGender();
@@ -121,4 +121,38 @@
 // a new variable " const newVariable = '''new''' className() ". The 'new' syntax is being emphasized here as being the keyword used to define a
 // variable as the name of an object that inherits all the properties, methods, etc of the class. In this last case above, Person() is the class
 // whose properties, methods, etc are being stored in the, now an object, object somePersonName. Thus we are then after able to access the properties,
-// methods, etc from dot notation such as somePersonName.printMyName();
+// methods, etc from dot notation such as somePersonName.printMyName(); 
+// 
+// 
+// so Maxamillian trolled me and then showed the actual ES6 way to do things in the very next video
+// so I'm going to recopy that code above and paste it down in true ES6 format
+// 
+// 
+// class Human {
+//     gender = 'male';
+// 
+//     printGender = () => {
+//         console.log(gender);
+//     }
+// }
+// 
+// class Person extends Human {
+//     name = 'Max';
+//     printMyName() {
+//         console.log(name);
+//     };
+//     printAnyName(inputName) {
+//         console.log(inputName);
+//     }
+// };
+// 
+// const somePersonName = new Person();
+// somePersonName.printMyName();
+// somePersonName.printGender();
+// somePersonName.printAnyName('Bob');
+// 
+// 
+// so the differences between this example of the code and the last example of the code is that:
+// all the constructor() and super() functions have been removed; as well as, the use of 'this.'
+// these things have been removed for the use of the new form of saving a property by simply creating the property name and setting it equal to a value
+// as well as, the use of arrow functions. Arrow functions are described somewhere around line 6 of the notes.js file
