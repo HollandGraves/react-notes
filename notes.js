@@ -156,3 +156,128 @@
 // all the constructor() and super() functions have been removed; as well as, the use of 'this.'
 // these things have been removed for the use of the new form of saving a property by simply creating the property name and setting it equal to a value
 // as well as, the use of arrow functions. Arrow functions are described somewhere around line 6 of the notes.js file
+
+
+// Spread & Rest Operators
+// ...
+// this three dots directly above is both the Spread and Rest operator depending on the context (placement) it's used in
+// 
+// the Spread operator ... is used to split array elements OR object properties, in essence this operator takes all the data of an old array, or object
+// and .map() s each item to a new array or object. This is very helpful because before it you had to use a method or a function to copy all the data
+// of an object or array into a new object or array, but now you can just use a simple operator as so:
+// 
+// e.g.
+// 
+// const newArrary = [...oldArray, 1, 2];
+// new object = {...oldObject, newProp: 5 };
+// 
+// this is super handy because each piece of data is being added to the new array or new object. Normally, if you set a new array or object 
+// equal to another array what will happen is the new array WILL POINT to the old array or object's location in storage, versus copying each
+// item into the new array; like so:
+//
+// e.g.
+//
+// oldArr = [1, 2, 3];
+// newArr = [oldArr, 4, 5];
+// console.log(newArr);
+//
+// what you would get in the console log is: [[1, 2, 3], 4, 5]
+// 
+// although with the Spread operator you would get all the data transfered into the new array, individually
+//
+// e.g.
+//
+// oldArr = [1, 2, 3];
+// newArr = [...oldArr, 4, 5];
+// console.log(newArr);
+//
+// what you would get in the console log is: [1, 2, 3, 4, 5]. Of course you can use this operator on objects
+//
+// e.g.
+//
+// oldObj = {prop1: 5, prop2: 4, prop3: 3};
+// newObj = {oldObj, prop4: 2, prop5: 1};
+// console.log(newObj);
+//
+// what you would get in the console log is: {{prop1: 5, prop2: 4, prop3: 3}, prop4: 2, prop5: 1}
+// 
+// although with the Spread operator you would get all the data transfered into the new object, individually
+// 
+// e.g.
+//
+// oldObj = {prop1: 5, prop2: 4, prop3: 3};
+// newObj = {...oldObj, prop4: 2, prop5: 1};
+// console.log(newObj);
+//
+// what you would get in the console log is: {prop1: 5, prop2: 4, prop3: 3, prop4: 2, prop5: 1}
+// As a sidenote, if the oldObj had a prop5 it would be overriden by the new prop5
+// 
+// 
+// 
+// the Rest operator ... can also be used to merge a list of function arguments into an arry
+// 
+// e.g.
+// 
+// function sortArgs(...args) {
+//     return args.sort();
+// };
+// 
+// or
+// 
+// function sortArgs(...args) {
+//     return args[3];
+// };
+// 
+// or
+// 
+// const filter = (...args) => {
+//     return args.filter(el => el === 1);
+// };
+// 
+// console.log(filter(1, 2, 3));
+// 
+// the console.log will only return 1
+// 
+// These functions will take an unlimited number of arguments and store them into an array which then can be accessed by methods
+
+
+// Destructuring
+// e.g.
+// [a, b] = ['Hello', 'Door'];
+// console.log(a);
+// console.log(b);
+//
+// the console.log(a) would return 'Hello' and the console.log(b) would return 'Door'
+// 
+// or
+// 
+// const numbers = [1, 2, 3];
+// [num1, num2] = numbers;
+// console.log(num1);    // returns 1
+// console.log(num2);    // returns 2
+// 
+// or
+// 
+// const numbers = [1, 2, 3];
+// [num1, , num3] = numbers;
+// console.log(num1);    // returns 1
+// console.log(num3);    // returns 3
+//
+// e.g.
+//
+// {name} = {name: 'Matthew', age: '28'};
+// console.log(name);
+// console.log(age);
+//
+// the console.log(name) would return 'Matthew' and the console.log(b) would return 'undefined'
+//
+// destructuring is a process similar to spread although instead of taking out all the data in an array or object, you only take out specific parts
+// that are declared. 
+// 
+// In the case of arrays, you assign a variable to the index of an array by putting a variable in a new array at a specific index
+// and then setting that array equal to another array, whatever value has the same index number as the variable in the array will be assigned to the
+// variable.
+// 
+// In the case of objects, you assign a variable the same name as a property you want to extract from an object, surrounded by curly braces, and set
+// that variable equal to an object filled with properties, one having the same name as the variable declared. The variable will gain the value of the
+// property it shares names with
