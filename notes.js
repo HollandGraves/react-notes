@@ -1,3 +1,25 @@
+
+
+
+
+//  TABLE OF CONTENTS
+//     1. ES6
+//     2. VANILLA JS
+//     3. REACT
+
+
+
+
+
+
+
+
+
+//     1. ES6
+
+
+
+
 // let & const
 // use let if you want to make a variable that is variable
 // use const if you want to store a value and never change
@@ -283,6 +305,13 @@
 // property it shares names with
 
 
+
+
+//     2. VANILLA JS
+
+
+
+
 // Various Array methods (NOT ES6)
 // .length() , returns the total number of items in the array
 // .sort() , organizes an array in alphabetical order if strings. A special function is needed to arrange an array of numbers in numerical order
@@ -334,3 +363,18 @@
 // .unshift() , adds an array item to the beginning of an array
 // .splice(pos, n) , remove an n amount of items from index position pos onward.
 // .reverse() , reverses array order
+
+
+
+
+//     3. REACT
+// 
+// 
+//          Table of Contents: REACT
+//              1.
+//              2.
+//              3.
+
+
+
+
