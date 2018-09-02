@@ -281,3 +281,33 @@
 // In the case of objects, you assign a variable the same name as a property you want to extract from an object, surrounded by curly braces, and set
 // that variable equal to an object filled with properties, one having the same name as the variable declared. The variable will gain the value of the
 // property it shares names with
+
+
+// Various Array methods (NOT ES6)
+// .length() , returns the total number of items in the array
+// .sort() , organizes an array in alphabetical order if strings. A special function is needed to arrange an array of numbers in numerical order
+//      the only problem is the array will be permanently be mutated, so the array must be saved into a variable
+//      e.g.
+//      let numArray = [1, 8787, 23, 900, 0];
+//      function copyArr(arr) {
+//          let newArr = [...arr];
+//          return newArr;
+//      }
+//      
+//      console.log(
+//          copyArr(numArray).sort((a , b) => a - b) // this function within the sort method will auto sort the numbers smallest to largest
+//      );
+//      console.log(
+//          copyArr(numArray).sort((a , b) => b - a) // this function within the sort method will auto sort the numbers largest to smallest
+//      );
+// .map() 
+// .concat() , concatonates two arrays. e.g. someArray.concat(someOtherArray); someOtherArray's array items will be added on to the end of someArray's
+// .includes() , determines whether an array contains a certain element and returns true or false as appropriate
+// .filter() 
+// .indexOf() , returns index number of array item.
+// .pop() , removes the last array item
+// .push() , adds an array item to the end of an array
+// .shift() , removes an array item to the beginning of an array 
+// .unshift() , adds an array item to the beginning of an array
+// .splice(pos, n) , remove an n amount of items from index position pos onward.
+// .reverse() , reverses array order
