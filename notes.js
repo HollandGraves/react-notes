@@ -300,11 +300,34 @@
 //      console.log(
 //          copyArr(numArray).sort((a , b) => b - a) // this function within the sort method will auto sort the numbers largest to smallest
 //      );
-// .map() 
+// .map(someFunction) , runs a function against each item of the array the method is being used against and stores each value into a new array
+//      var array1 = [1, 4, 9, 16];
+// 
+//      const map1 = array1.map(x => x * 2); // pass a function to map
+//      console.log(map1); // expected output: Array [2, 8, 18, 32]
+// .some(someFunctionWithALogicalCondition) , returns true if even one item passes the function's logical condition
+// .every(someFunctionWithALogicalCondition) , returns true if every item passes the function's logical condition
+//      e.g.
+//      function isBelowThreshold(currentValue) {
+//      return currentValue < 40;
+//      }
+//   
+//      var array1 = [1, 30, 39, 29, 10, 13];
+//      console.log(array1.every(isBelowThreshold)); // expected output: true
+
+// .filter(someFunctionWithALogicalCondition) , creates a new array containing all the items that pass the logical condition of the function argument
+//      e.g.
+//      var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+// 
+//      const result = words.filter(word => word.length > 6);
+// 
+//      console.log(result); // expected output: Array ["exuberant", "destruction", "present"]
+// .forEach(someFunction) , executes a provided function once for each array element
+// 
 // .concat() , concatonates two arrays. e.g. someArray.concat(someOtherArray); someOtherArray's array items will be added on to the end of someArray's
 // .includes() , determines whether an array contains a certain element and returns true or false as appropriate
-// .filter() 
 // .indexOf() , returns index number of array item.
+// .join('seperator') , joins all items of an array into a single string, each item is seperated by whatever symbol is wrapped with single quotes and passed as seperator
 // .pop() , removes the last array item
 // .push() , adds an array item to the end of an array
 // .shift() , removes an array item to the beginning of an array 
