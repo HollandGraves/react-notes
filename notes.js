@@ -1,4 +1,4 @@
-
+// Type the exact '#. Section' into a ctrl + f search to jump to section
 
 
 
@@ -16,6 +16,11 @@
 
 
 //     1. ES6
+
+
+
+
+
 
 
 
@@ -50,7 +55,8 @@
 // export default varName
 // 
 // in these examples for FILE NAME: person.js
-// notice the 'default' keyword being used, the default export is set to the person function so if the import call is made towards the person.js file, the import call will point to the person function automatically
+// notice the 'default' keyword being used, the default export is set to the person function so if the import call is made towards the person.js file, 
+//      the import call will point to the person function automatically
 // 
 // FILE NAME: utility.js
 // export const clean = () => {...};
@@ -58,7 +64,9 @@
 // export const baseData = 10;
 // 
 // in these examples for FILE NAME: utility.js
-// the default keyword is absent from these examples of export, this means the export is very specific and tied to the file name. That way, when another file looks to import from utility.js it will have to specifically point to the item it wishes to import: by variable name with curly braces surrounding the variable name
+// the default keyword is absent from these examples of export, this means the export is very specific and tied to the file name. That way, 
+//      when another file looks to import from utility.js it will have to specifically point to the item it wishes to import: by variable name with 
+//      curly braces surrounding the variable name
 // you also do not need to put the .js from the end of the file location if the file type is js
 // 
 // these are example of imports
@@ -66,7 +74,8 @@
 // import person from './person.js'
 // import prs from './person.js'
 // 
-// in these examples importing from person.js the first part of the syntax is the import keyword, then a variable THE USER DECIDES THE IMPORT VALUE WILL BE STORED IN, is created. Followed by the keyword: from , and then the realtive file location, surrounded by single quotes
+// in these examples importing from person.js the first part of the syntax is the import keyword, then a variable THE USER DECIDES THE IMPORT VALUE 
+//      WILL BE STORED IN, is created. Followed by the keyword: from , and then the realtive file location, surrounded by single quotes
 // you also do not need to put the .js from the end of the file location if the file type is jS
 // 
 // import { baseData } from './utility.js'
@@ -79,9 +88,13 @@
 // or
 // import * as bundled from './utility.js' 
 // 
-// in these examples importing from utility.js the first syntax is also import, then curly braces, and within the curly braces, the exact varable name of. within the exporting file, what you wish to import, and if you wish to give the exact variable a name relavent to the importing file, then you use the keyword:  as  followed by your variable name of choice. All that is followed by the keyword: from , and the relative location of the file surrounded by single quotes, just as the default importing method
+// in these examples importing from utility.js the first syntax is also import, then curly braces, and within the curly braces, the exact varable 
+//      name of. within the exporting file, what you wish to import, and if you wish to give the exact variable a name relavent to the importing file, 
+//      then you use the keyword:  as  followed by your variable name of choice. All that is followed by the keyword: from , and the relative location 
+//      of the file surrounded by single quotes, just as the default importing method
 // if you wish to import multiple specific items within the curly braces then look to the second to last example. You put a comma in between them
-// if you wish to import all the exports of a file, then look to the last example, the * imports all the exports of a file and saves them as properties of the  bundled  object, so to access each export, you would use the follow dot notation such as bundled.clean or bundled.baseData
+// if you wish to import all the exports of a file, then look to the last example, the * imports all the exports of a file and saves them as properties 
+//      of the  bundled  object, so to access each export, you would use the follow dot notation such as bundled.clean or bundled.baseData
 // you also do not need to put the .js from the end of the file location if the file type is jS
 
 
@@ -307,7 +320,17 @@
 
 
 
+
+
+
+
+
 //     2. VANILLA JS
+
+
+
+
+
 
 
 
@@ -356,7 +379,8 @@
 // .concat() , concatonates two arrays. e.g. someArray.concat(someOtherArray); someOtherArray's array items will be added on to the end of someArray's
 // .includes() , determines whether an array contains a certain element and returns true or false as appropriate
 // .indexOf() , returns index number of array item.
-// .join('seperator') , joins all items of an array into a single string, each item is seperated by whatever symbol is wrapped with single quotes and passed as seperator
+// .join('seperator') , joins all items of an array into a single string, each item is seperated by whatever symbol is wrapped with 
+//      single quotes and passed as seperator
 // .pop() , removes the last array item
 // .push() , adds an array item to the end of an array
 // .shift() , removes an array item to the beginning of an array 
@@ -367,14 +391,304 @@
 
 
 
+
+
+
+
+
 //     3. REACT
 // 
 // 
 //          Table of Contents: REACT
-//              1.
-//              2.
-//              3.
+//              A. STARTING
+//                  a1. Starting a React App
+//                  a2. Going over the files created by create-react-app
+//              B. BEST PRACTICES
+//                  b1. Best practices in a React App
+//                  b2. Notes on creating a React App
 
 
 
 
+
+
+
+
+
+//              a1. Starting a React App
+
+
+
+
+
+
+
+
+
+// 1. install Node.js first, so you can get npm (node packet manager)
+// 2. clone and download the create-react-app file from github (managed by the Facebook team)
+// 3. run the command from the terminal: npm install create-react-app -g        // if using linux or mac run: sudo npm install create-react-app -g      and give password when asked
+// 4. run the command: create-react-app name-of-file-you-want-app-to-create-in          // this will create the app in a folder of your naming
+// 5. run the command: cd name-of-file-location         // this will bring you to the folder in the terminal
+// 6. run the command: npm start        // this will create a development server and open up a web browser page     // always start your project with npm start and keep it running to keep the server running
+
+
+
+
+
+
+
+
+
+//              a2. Going over the files created by create-react-app
+
+
+
+
+
+
+
+
+
+// 1. on the root level of the folder, without going any deeper down the paths, you have a couple of configuration files
+// 2. the locked files can be ignored, they're simply locking in the version of the dependencies being used
+// 3. the general dependencies the project has are defined in the package.json file
+//      within the package.json file: the dependencies and their versions are defined
+//      within the package.json file: and the scripts that you can run in the terminal are defined as well
+//      the command: react-scripts start        watches, compiles, and optimizes the code
+//      the command: react-scripts build        stores that compiled code in a folder, until you run build the compiled code from start is 
+//      saved in memory
+//      there are more scripts although that is good for now
+// 4. on the node_modules level, the node_modules folder holds all the dependencies and sub dependencies.
+//      you shouldn't edit anything in this folder
+// 5. the public folder is the root folder that gets served by the web server in the end 
+//      inside this folder is the only HTML page. you will never create another html page in the project
+//      if you're creating a multi-page project, you would create multiple create-react-app projects, each with their own html page that all 
+//      the components load through
+//      if you want to add some links to CSS libraries, or meta tags, you can do that within the index.html file, within each specific page
+// 6. the src folder is where all React components are made
+//      note: the index.js file gets access to the      ReactDOM.render(<App />, document.getElementById('root'));      line of code and all the imports you'll need
+//      note: both App.css and index.css apply styles globally
+//      note: registerServiceWorker.js will pre-chache the script files
+//      note: the App.test.js file will create tests for components
+// 7. feel free to delete the logo.svg file, as it is the file for the default react project unpacked
+
+
+
+
+
+
+
+
+
+//                  b1. Best practices in a React App
+
+
+
+
+
+
+
+
+
+// BEST PRACTICE: Make sure you wrap all your code within the rendor() function of a component in one div with the classname of the component
+//      e.g.
+// 
+//      import React, { Component } from 'react';
+//      import './App.css';
+// 
+//      class App extends Component {
+//      render() {
+//              return (
+//                  <div className="App">
+//                      <h1>Yo yo yo yo embryooo</h1>
+//                      <p>This is really working</p>
+//                  </div>
+//              );
+//          }
+//      }
+// 
+//      export default App;
+//
+//      notice how the div that is being returned contains all the information of the component, AND has the same classname as the class 
+//      that contains the render function
+// 
+// BEST PRACTICE: Always import your component with a capital first letter, because all characters lowercase--like div, h1, etc--are reserved
+//      for the native HTML elements.
+//      so for example you could import and use a <Div /> tag as a component reference tag name because it isn't a reserved keyword
+//
+// BEST PRACTICE: When making a function within the class of a stateful component, it is always best to add the term 'Handler' behind 
+//      any function made if the function will not be actively called but we be assigned as an event handler
+
+
+
+
+
+
+
+
+
+//                  b2. Notes on creating a React App
+
+
+
+
+
+
+
+
+
+// NOTE REACT: there are stateless components, components that are static and do not change state which are setup as follows:
+//      e.g.
+//      import React from 'react'
+//      const lowerCaseComponentName = () => { return 'stuff' }
+//      export default lowerCaseComponentName;
+//
+// NOTE REACT: to add properties to your stateless component, you must add props to the argument of the function above
+//      e.g.
+//      import React from 'react'
+//      const lowerCaseComponentName = (props) => { return <div>{props.name} + {props.age}</div> }      // notice props as an argument
+//      export default lowerCaseComponentName;
+//
+//      in this case what happens is that the values for props come from a JSX-html tag on a component that is importing the above component
+//      e.g.
+//      <lowerCaseComponentName name='Mario' age='49' />
+//      name and age will become properties of props and can be accessed through dot notation, as illustrated above
+//
+// NOTE REACT: and there are stateful components, components that change state (i.e. have the ability to trigger jS code upon an action to fire) which are setup as follows:
+//      e.g.
+//      import React, { Component } from 'react'
+//      class upperCaseClassName extends Component {
+//          render() {
+//              return (
+//                  <div className = 'upperCaseClassName'>
+//                      <Component1 />
+//                      <div>
+//                          <h1>hey WHAZZAP</h1>
+//                      </div>
+//                  </div>
+//              );
+//          }
+//      }
+//      export default upperCaseClassName;
+//
+// NOTE REACT: to add properties to your stateful component, you must add props to the argument of the function above, as well
+//      e.g.
+//      import React, { Component } from 'react'
+//      class upperCaseClassName extends Component {
+//          render() {
+//              return (
+//                  <div className = 'upperCaseClassName'>
+//                      <Component1 />
+//                      <div>
+//                          <h1>my name is: {this.props.name} and my age is {this.props.age}</h1>           // notice the use of this.props
+//                      </div>
+//                  </div>
+//              );
+//          }
+//      }
+//      export default upperCaseClassName;
+//
+//      in this case what happens is that the values for props come from a JSX-html tag on a component that is importing the above component, just like the stateless version
+//      e.g.
+//      <upperCaseComponentName name='Luigi' age='52' />
+//      name and age will be passed into the render function as properties of props and can be accessed through dot notation just
+//      as with stateless components. As illustrated above, the only difference is that, to access the properties name and age, you must use this.props
+//
+// NOTE REACT: to access the 'children' of a JSX-html tag: instead of making a self-closing tag, make a tag and then a closing tag in your root component.
+//      Then put whatever text, html tags, components, etc you want inbetween the tags. The way to access the material inbetween tags is, within the app that is being imported, through the .children method of props or this.props
+//      e.g.
+// 
+//      (within the root component that's utilizing the JSX-html tag)
+//      <lowerCaseComponentName age='28' name='Matthew'>This is the text that will be passed in through the .children method</lowerCaseComponentName>
+//      
+//      (within the imported component i.e. lowerCaseComponentName)
+//      e.g.
+//      import React from 'react'
+//      const lowerCaseComponentName = (props) => { return <div>{props.children</div> }      // instead of {props.children} there will be 'This is the text that will be passed in through the .children method'
+//      export default lowerCaseComponentName;
+//
+// NOTE REACT: If you wish to define a variable within a class you use a special syntax. This obviously only works with stateful components as they are
+//      the only component type that uses classes (thus far)
+//      e.g.
+//      class upperCaseClassName extends Component = {
+//          aVariable = "notice how I don't use the var, let, or const keyword to define a variable in a class";
+// 
+//          render() {
+//              return (
+//                  <div>
+//                      <h1>>wazzap</h1>
+//                  </div>
+//              );
+//          }
+//      }
+//
+// NOTE REACT: This next property can only be defined within stateful components that import the { Component } object from the 'react' component. 
+//      The property in question is called 'state'. It is an object for changing the information of a component within the component; rather than
+//      changing the information outside of the component with values in the JSX-html tag, and using props to harness those values. Instead of 
+//      hard coding props values into the JSX-html tag, you can add them in the state object as a property of state and call the values you need 
+//      through this.state. The power of using the state object is that, whenever you make a change to state, the component will re-render and
+//      reflect the new state.
+//      e.g.
+//      class upperCaseClassName extends Component = {
+//          state = {
+//              persons: [
+//                  { name: 'Zach', age: 28 },
+//                  { name: 'Dustin', age: 29 },
+//                  { name: 'Kat', age: 33 }
+//              ]
+//          }
+// 
+//          render() {
+//              return (
+//                  <div className='upperCaseClassName'>
+//                      {this.state.persons[0].name} {this.state.persons[0].age}
+//                      {this.state.persons[1].name} {this.state.persons[1].age}
+//                      {this.state.persons[2].name} {this.state.persons[2].age}
+//                  </div>
+//              );
+//          }
+//      }
+//
+//      export default upperCaseClassName
+//
+// NOTE REACT: to fully utilize the state of a component create an event handler function within the class. This even handler function will make the
+//      state change and thus cause the componenet to re-render and reflect the new state. You must also create something in the component that
+//      triggers the event handler function, such as an onClick event with a button. NOTE: if using onClick, you must capitalize Click, for 'onClick'
+//      is a reserved word in React.
+// 
+//      Make sure that you use curly braces to run the script, otherwise, with the script being in the return function, it will read as text instead of
+//      jS.
+// 
+//      Also make sure that you DO NOT put () when calling the event click handler in your JSX (e.g. <button onClick={this.switchPersonHandler}>Switch Names</button>)
+//      otherwise the function will be an IIFE and execute immediately once React renders the button to the DOM. You only want to pass a reference
+//      to the function using this.
+// 
+//      e.g. 
+//      class upperCaseClassName extends Component = {
+//          state = {
+//              persons: [
+//                  { name: 'Zach', age: 28 },
+//                  { name: 'Dustin', age: 29 },
+//                  { name: 'Kat', age: 33 }
+//              ]
+//          }
+// 
+//          switchPersonHandler = () => {
+// 
+//          }
+// 
+//          render() {
+//              return (
+//                  <div className='upperCaseClassName'>
+//                      <button onClick={this.switchPersonHandler}>Switch Names</button>
+//                      <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
+//                      <Person name={this.state.persons[1].name} age={this.state.persons[1].age}/>
+//                      <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
+//                  </div>
+//              );
+//          }
+//      }
+//
+//      export default upperCaseClassName
+//      
