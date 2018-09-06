@@ -652,12 +652,19 @@
 //
 //      export default upperCaseClassName
 //
-// NOTE REACT: to fully utilize the state of a component create an event handler function within the class. This even handler function will make the
-//      state change and thus cause the componenet to re-render and reflect the new state. You must also create something in the component that
-//      triggers the event handler function, such as an onClick event with a button. NOTE: if using onClick, you must capitalize Click, for 'onClick'
-//      is a reserved word in React.
+// NOTE REACT: to fully utilize the state of a component: create an event handler function within the class. 
+//      This even handler function will utitlize the this.setState() function to dynamically update the DOM. 
+//      The setState() function is a reserved function by React. 
+//      You utilize 'this.' to reference the state object that is found local to the component. 
+//      The this.setState() method will allow you to change any property of the already defined state. 
+//      The method this.setState() takes an argument. 
+//      It specifically takes an object as an argument, that way, if you have any other objects within the state property already defined, 
+//      only the specific object passed into the this.setState() method will be targeted. 
+//      The even handler function, when activated, will make the state change and thus cause the componenet to re-render and reflect the new state. 
+//      You must also create something in the component that triggers the event handler function, such as an onClick event with a button. 
+//      NOTE: if using onClick, you must capitalize Click, for 'onClick' is a reserved word in React.
 // 
-//      Make sure that you use curly braces to run the script, otherwise, with the script being in the return function, it will read as text instead of
+//      Make sure that you use curly braces to run the onEvent script, like anything else, otherwise, with the script being in the return function, it will read as text instead of
 //      jS.
 // 
 //      Also make sure that you DO NOT put () when calling the event click handler in your JSX (e.g. <button onClick={this.switchPersonHandler}>Switch Names</button>)
@@ -675,13 +682,21 @@
 //          }
 // 
 //          switchPersonHandler = () => {
-// 
+//              this.setState(
+//                      {
+//                          persons: [
+//                              { name: 'Matthew Matias', age: 28 },
+//                              { name: 'Dustin Higginbotham', age: 29 },
+//                              { name: 'Katherine Higginbotham', age: 33 }
+//                          ]
+//                      }
+//              )
 //          }
 // 
 //          render() {
 //              return (
 //                  <div className='upperCaseClassName'>
-//                      <button onClick={this.switchPersonHandler}>Switch Names</button>
+//                      <button onClick={this.switchPersonHandler}>Switch Names</button>                // The name and even will change upon click on this button
 //                      <Person name={this.state.persons[0].name} age={this.state.persons[0].age}/>
 //                      <Person name={this.state.persons[1].name} age={this.state.persons[1].age}/>
 //                      <Person name={this.state.persons[2].name} age={this.state.persons[2].age}/>
@@ -692,3 +707,30 @@
 //
 //      export default upperCaseClassName
 //      
+// NOTE REACT: YOU CAN PASS METHODS ALSO AS PROPS
+//      This is SUPER handy because
+//
+//      e.g. (from the example above)
+//
+//      <Person click={this.switchPersonHandler} />                 ***********************************IMPORTANT***********************************
+//
+//      this will allow the method that changes state to be passed a property of the 'click' prop
+//
+//      so to access this even handler state changer, now, all you have to do
+//      is access the props.click property through an e.g. onClick event within the component
+//      
+//      e.g.
+//
+//      const person = (props) => {
+//          return (
+//              <div onClick={props.click}>
+//                  <p> When the div is clicked on
+//                      the .click property, which
+//                      holds the even handler
+//                      will fire
+//                  </p>
+//              </div>
+//          )
+//      }
+// 
+// NOTE REACT: TO PASS ARGUMENTS THROUGH COMPONENTS
