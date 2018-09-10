@@ -733,4 +733,22 @@
 //          )
 //      }
 // 
-// NOTE REACT: TO PASS ARGUMENTS THROUGH COMPONENTS
+// NOTE REACT: TO PASS ARGUMENTS THROUGH COMPONENTS: give the REDUCER function (event handler function, in this case switchPersonHandler function above)
+//      an argument when you define it and use the argument within the definition of the function to make the function have dynamic input.
+//      Then, when calling the function, you can use either:
+// 
+//      1.      <Peson click={this.switchPersonHandler.bind(this, 'argument1', 'argument2', 'arg3', etc)} />
+//      This above will pass the function into the 'click' props and bind this to the switchPersonHandler function, along with the arguments,
+//      so if the function is passed and called in another component as props then the scope of this and the arguments will remain
+// 
+//      2.      <Person click={() => this.switchPersonHandler('argument1', 'argument2', 'arg3', etc)}
+//      In this case directly above, a function with no arguments [actually, there is an abstracted 'event' argument that looks for an event within the ()]
+//      will instantly return AND RUN the switchPersonHandler function. Since there are arguments within the REDUCER function being returned, they will be
+//      passed into the switchPersonHandler function and maintain the scope of this due to an arrow function being used.
+// 
+//      GENERAL SIDE NOTE REMINDER: when a function has () behind it, it is auto invoked.
+//      e.g.
+//      this.switchPersonHandler is a function that is not being called, while
+//      this.switchPersonHandler() is a function that is being called
+// 
+// 
