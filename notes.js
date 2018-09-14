@@ -366,7 +366,7 @@
 //   
 //      var array1 = [1, 30, 39, 29, 10, 13];
 //      console.log(array1.every(isBelowThreshold)); // expected output: true
-
+// 
 // .filter(someFunctionWithALogicalCondition) , creates a new array containing all the items that pass the logical condition of the function argument
 //      e.g.
 //      var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
@@ -387,6 +387,26 @@
 // .unshift() , adds an array item to the beginning of an array
 // .splice(pos, n) , remove an n amount of items from index position pos onward.
 // .reverse() , reverses array order
+// 
+// event.target , the way this works is that is targets the child(-ren) of the object it is called on. The dot notation can continue on like:
+//      e.g.
+//      // Make a list
+//      var ul = document.createElement('ul');
+//      document.body.appendChild(ul);
+// 
+//      var li1 = document.createElement('li');
+//      var li2 = document.createElement('li');
+//      ul.appendChild(li1);
+//      ul.appendChild(li2);
+// 
+//      function hide(e){
+//          // e.target refers to the clicked <li> element
+//          // This is different than e.currentTarget which would refer to the parent <ul> in this context
+//          e.target.style.visibility = 'hidden';
+//      }
+// // Attach the listener to the list
+// // It will fire when each <li> is clicked
+// ul.addEventListener('click', hide, false);
 
 
 
